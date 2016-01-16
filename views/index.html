@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="portfolio" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators" id="portfolio_indicators">
+            <!-- First indication is set here and is active, the rest are set in portfolio.js-->
+            <li data-target="#portfolio" data-slide-to="0" class="active"></li>
+
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner" id="inner_portfolio">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <!-- First image is set here and is active, the rest are set in portfolio_data.js-->
+                <div class="fill" style="background-image:url('images/woman_reclining.jpg');"></div>
+                <!-- <div class="carousel-caption">
+                    <h3>Live nude in charcoal</h3>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#portfolio" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#portfolio" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    <!-- /.container -->
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="portfolio_data.js"></script>
+<script src="/js/portfolio.js"></script>
+{% endblock %}
+
